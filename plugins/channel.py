@@ -84,8 +84,8 @@ async def addchannel(client: Bot, message: Message):
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>User {user.first_name} couldn't join your channel! Make sure user is not banned in channel."
-            "\n\nOr manually add the user to your channel and try again</b>",
+            f"<b>User {user.first_name} couldn't join your channel! Make sure @HERMIONE_MUSIC is not banned in channel."
+            "\n\nOr manually add the @HERMIONE_MUSIC to your channel and try again</b>",
         )
         return
 
@@ -98,9 +98,9 @@ async def addchannel(client: Bot, message: Message):
         return
 
     intmsg = await message.reply_text(
-        "<b>Please wait while I'm adding your channel files to DB"
+        "<b>Please wait while hermione adding your channel files to DB"
         "\n\nTime may vary according to files present in the channel"
-        "\nSay Hi to the support @DaisySupport_Official!!</b>"
+        "\nSay Hi to the support @Cortana_BOTs!!</b>"
     )
 
     channel_id = chatdetails.id
@@ -110,7 +110,7 @@ async def addchannel(client: Bot, message: Message):
 
     already_added = await ifexists(channel_id, group_id)
     if already_added:
-        await intmsg.edit_text("I'm already filtering it!")
+        await intmsg.edit_text("I'm already filtering it🥳!")
         return
 
     docs = []
@@ -233,8 +233,8 @@ async def deletechannelfilters(client: Bot, message: Message):
         return
 
     intmsg = await message.reply_text(
-        "<b>Removing from Daisy's autofilter db"
-        "\n\nSay Hi to the support @DaisySupport_Official!</i>"
+        "<b>Removing from Hermione's autofilter db"
+        "\n\nSay Hi to the support @Cortana_BOTs !</i>"
     )
 
     channel_id = chatdetails.id
